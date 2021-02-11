@@ -1,0 +1,34 @@
+// Colors
+$darkest-blue: #1a1c85;
+$dark-blue: #242582;
+$purple: #553d67;
+$pink: #f64c72;
+$light-brown: hsl(317, 16%, 53%);
+$blue: #2f2fa2;
+
+$color-white: #ffffff;
+$color-black: #252a32;
+$color-light: #f1f5f8;
+$color-red: #d32f2f;
+$color-blue: #148cb8;
+
+$box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+
+//borderradius
+$border-radius: 7.5px;
+
+// Screen sizes
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm: 576px;
+
+// Small tablets (portrait view)
+$screen-md: 768px;
+
+// Tablets and small desktops
+$screen-lg: 992px;
+
+// Large tablets and desktops
+$screen-xl: 1200px;
+
+@import "../utils/grid/variables";

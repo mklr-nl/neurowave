@@ -1,0 +1,59 @@
+@import "../utils/grid/mixins";
+
+@mixin largescreen {
+  @media only screen and(min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin h1 {
+  font-size: 4rem;
+  padding-top: $Grid-gutter-half;
+  padding-bottom: $Grid-gutter-half;
+  font-weight: 800;
+}
+
+@mixin h2 {
+  font-size: 2.5rem;
+  padding-top: $Grid-gutter-half;
+  padding-bottom: $Grid-gutter-half;
+  font-weight: 500;
+}
+
+@mixin h3 {
+  font-size: 1.5rem;
+  padding-top: $Grid-gutter-half;
+  padding-bottom: $Grid-gutter-half;
+}
+
+@mixin p {
+  padding-top: $Grid-gutter-half/2;
+  padding-bottom: $Grid-gutter-half/2;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+@mixin icon {
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
+}
+
+@mixin slogan {
+}
+
+@mixin btn {
+  border-radius: 7.5px;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  margin: $Grid-gutter 0;
+  padding: $Grid-gutter-half;
+  &:hover {
+    transform: translateY(-3.25px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+}

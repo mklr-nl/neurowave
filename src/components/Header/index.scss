@@ -1,0 +1,99 @@
+// .row{
+//     padding: $Grid-gutter-half 0;
+// }
+
+.Nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &__row{
+        display: flex;
+        align-items: center;
+        min-height: 6vh;
+    }
+}
+
+.Brand__text{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: black;
+    text-align: start;
+    margin: 0;
+    &:hover{
+        color: lightblue;
+    }
+}
+
+#menu{
+    @media only screen and (max-width: $screen-md){
+        position: absolute;
+        transform: translatey(50px);
+    }
+}
+
+.Menu{
+    display: flex;
+    justify-content: center;
+
+    &__list{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        
+        &__link{
+            text-decoration: none;
+            color: black;
+            padding-left: $Grid-gutter-half;
+            padding-right: $Grid-gutter-half;
+            &:hover{
+                color: lightblue;
+            }
+        }
+    }
+}
+
+.Contact{
+    text-align: end;
+    cursor: pointer;
+    &__link{
+        font-size: 1.5rem;
+        &:hover{
+            color: lightblue;
+        }
+    }
+}
+
+@media only screen and (min-width: $screen-md) {
+    #mobileMenu{
+        display: none;
+    }
+}
+
+.mobileMenu{
+    i{  
+        font-size: 2rem;
+        cursor: pointer;
+        &:hover{
+            color: lightblue;
+        }
+    }
+}
+
+// .Social{
+//     color: black;
+//     display: flex;
+//     &-item{
+//         margin: 0 5px;
+//         i{
+//             font-size: 1.5rem;
+//         }
+
+//     }
+// }
+
+.notActive{
+    display: none;
+}
