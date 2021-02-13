@@ -9,6 +9,7 @@
     right: 0;
     bottom: 0;
     &__row{
+        justify-content: space-around;
         min-height: 4vh;
         align-items: center;
     }
@@ -29,7 +30,6 @@
 .Menu{
     display: flex;
     justify-content: center;
-
     &__list{
         transition: all ease-in-out 0.4s;
         list-style-type: none;
