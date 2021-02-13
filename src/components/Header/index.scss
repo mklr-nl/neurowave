@@ -8,11 +8,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    &__row{
-        display: flex;
-        align-items: center;
-        min-height: 6vh;
-    }
 }
 
 .Brand__text{
@@ -27,29 +22,34 @@
     }
 }
 
-#menu{
-    @media only screen and (max-width: $screen-md){
-        position: absolute;
-        transform: translatey(50px);
-    }
-}
-
 .Menu{
     display: flex;
     justify-content: center;
 
     &__list{
+        transition: all ease-in-out 0.4s;
         list-style-type: none;
         display: flex;
         justify-content: center;
+        @media only screen and (max-width: $screen-md) {
+            transform: translateY(30px);
+            display: none;
+            z-index: -1;
+            position: absolute;
+            opacity: 0;
+        }
+
+        &__item{
+            padding-left: $Grid-gutter-half;
+            padding-right: $Grid-gutter-half;
+        }
         
         &__link{
             text-decoration: none;
             color: black;
-            padding-left: $Grid-gutter-half;
-            padding-right: $Grid-gutter-half;
             &:hover{
                 color: lightblue;
+                border-bottom: 2px solid black;
             }
         }
     }
@@ -66,19 +66,24 @@
     }
 }
 
-@media only screen and (min-width: $screen-md) {
-    #mobileMenu{
+.mobileMenu{
+    @media only screen and (min-width: $screen-md) {
         display: none;
     }
-}
-
-.mobileMenu{
-    i{  
-        font-size: 2rem;
-        cursor: pointer;
+    &__close{
+        &:hover{
+            color: rgb(232, 98, 98);
+        }
+    }
+    &__open{
         &:hover{
             color: lightblue;
         }
+    }
+
+    &__icon{  
+        font-size: 2rem;
+        cursor: pointer;
     }
 }
 
@@ -96,4 +101,13 @@
 
 .notActive{
     display: none;
+}
+
+.active{
+    display: flex;
+    opacity: 1;
+}
+
+.menuDown{
+    transform: translateY(50px);
 }
