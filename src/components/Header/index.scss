@@ -1,117 +1,75 @@
-// .row{
-//     padding: $Grid-gutter-half 0;
-// }
+.Nav__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 
-.Nav{
-    position: fixed;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    &__row{
-        justify-content: space-around;
-        min-height: 4vh;
-        align-items: center;
+  .Brand, .Contact{
+    &__text{
+      cursor: default;
+      text-decoration: none;
+      color: $dark-gray;
+      font-size: 1.5rem;
+      &:hover{
+        color: $dark-green;
+      }
     }
-}
+  }
 
-.Brand__text{
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: black;
-    text-align: start;
-    margin: 0;
-    &:hover{
-        color: lightblue;
+  .Menu{
+    @media screen and (max-width: $screen-md) {
+      display:none;
     }
-}
-
-.Menu{
     display: flex;
     justify-content: center;
-    &__list{
-        transition: all ease-in-out 0.4s;
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        @media only screen and (max-width: $screen-md) {
-            transform: translateY(30px);
-            display: none;
-            z-index: -1;
-            position: absolute;
-            opacity: 0;
-        }
 
-        &__item{
-            padding-left: $Grid-gutter-half;
-            padding-right: $Grid-gutter-half;
-        }
-        
-        &__link{
-            text-decoration: none;
-            color: black;
-            &:hover{
-                color: lightblue;
-                border-bottom: 2px solid black;
-            }
-        }
-    }
-}
+    &__item{
+      list-style: none;
 
-.Contact{
-    text-align: end;
-    cursor: pointer;
-    &__link{
-        font-size: 1.5rem;
+      &__link{
+        color: $dark-gray;
+        text-decoration: none;
+        padding: 0 $Grid-gutter-half;
         &:hover{
-            color: lightblue;
+          color: $dark-green;
         }
+      }
     }
+  }
 }
 
-.mobileMenu{
-    @media only screen and (min-width: $screen-md) {
-        display: none;
+
+.Mobile__menu{
+  margin-top: 5px;
+  display: none;
+  justify-content: space-around;
+
+  &__item{
+    width: 25%;
+    height: 25%;
+    list-style: none;
+    &:not(:last-child){
+      margin-right: 5px;
     }
-    &__close{
-        &:hover{
-            color: rgb(232, 98, 98);
-        }
+
+    &__btn{
+      background-color: $light-green;
+      width: 100%;
+      height: 100%;
+      font-weight: 400;
+      color: $dark-gray;
+      outline: none;
+      border: none;
+      &:hover{
+        background: $dark-green;
+        color: white;
+      }
+      @media screen and (max-width: $screen-sm) {
+        font-size: 0.7rem;
+        min-height: $Grid-gutter;
+      }
     }
-    &__open{
-        &:hover{
-            color: lightblue;
-        }
-    }
-
-    &__icon{  
-        font-size: 2rem;
-        cursor: pointer;
-    }
-}
-
-// .Social{
-//     color: black;
-//     display: flex;
-//     &-item{
-//         margin: 0 5px;
-//         i{
-//             font-size: 1.5rem;
-//         }
-
-//     }
-// }
-
-.notActive{
-    display: none;
-}
-
-.active{
+  }
+  @media screen and (max-width: $screen-md) {
     display: flex;
-    opacity: 1;
-}
-
-.menuDown{
-    transform: translateY(50px);
+  }
 }
