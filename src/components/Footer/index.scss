@@ -4,6 +4,9 @@ footer{
     bottom: 0;
 }
 
+.Footer__row{
+    justify-content: space-between;
+}
 
 .Footer{
     &__title{
