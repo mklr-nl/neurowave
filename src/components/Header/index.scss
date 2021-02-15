@@ -1,17 +1,15 @@
 .Nav{
-
+  .Section{
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   .row{
+    background: white;
+
     @media screen and (min-width: $screen-md) {
       align-items: baseline;
     }
-  }
-
-  &__container{
-    position: fixed;
-    top:0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__brand{
@@ -80,10 +78,11 @@
   }
   
   &__contact{
-    display: none;
-    @media screen and (min-width: $screen-md){
-      display: inline;
+    text-align: end;
+    @media screen and (max-width: $screen-md){
+      display: none;
     }
+
     &__text{
       cursor: default;
       text-decoration: none;
@@ -136,3 +135,23 @@
   }
 }
 
+.Extra__menu{
+  transition: ease all 1s;
+  width: 100%;
+  padding-top: 100px;
+  z-index: -1;
+  transform: translateY(-210px);
+  position: absolute;
+  right: 0;
+  left: 0;
+  // display:none;
+
+  .extraBtn{
+    transition: all ease-in-out 0.4s;
+    // opacity: 0;
+  }
+}
+
+.moveDown{
+  transform: translateY(-100px);
+}

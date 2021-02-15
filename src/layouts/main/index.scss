@@ -6,3 +6,19 @@
   font-family: "Poppins", sans-serif;
   user-select: none;
 }
+
+.active{
+  display: initial;
+}
+
+.notActive{
+  display: none;
+}
+
+.opacity100{
+  opacity: 1;
+}
+
+.opacity0{
+  opacity: 0;
+}

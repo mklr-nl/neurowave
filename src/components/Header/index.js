@@ -1,5 +1,34 @@
 import "./index.scss";
 
+const burger = document.querySelector(".Nav__burger__icon");
+const extraMenu = document.querySelector(".Extra__menu");
+const extraMenuBtn = document.querySelectorAll(".extraBtn");
+
+let active = false;
+
+burger.addEventListener("click", openExtraMenu);
+
+function openExtraMenu() {
+    extraMenu.classList.toggle("active");
+    setTimeout(function(){
+        extraMenu.classList.toggle("moveDown");
+    })
+
+    // setTimeout(function() {
+    //     if (!active){
+    //         for(let i=0; i<extraMenuBtn.length; i++){
+    //         extraMenuBtn[i].style.opacity = 1;
+    //         active = true;
+    //         }
+    //     } else {
+    //         for(let i=0; i<extraMenuBtn.length; i++){
+    //         extraMenuBtn[i].style.opacity = 0;
+    //         active = false; 
+    //         }
+    //     }
+    // },1)
+}
+
 
 
 // const menuBtn = document.querySelector(".menu-icon span");
