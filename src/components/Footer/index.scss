@@ -4,31 +4,41 @@ footer{
     bottom: 0;
 }
 
-.Footer__row{
-    justify-content: space-between;
-}
-
 .Footer{
     &__title{
         font-weight: 500;
         padding: $Grid-gutter-half 0;
     }
+    &__text{
+        color: $dark-gray;
+    }
 
     &__contact{
         &__form{
+            color: $dark-gray;
             display: flex;
             padding: $Grid-gutter-half 0;
-            &__btn{
-                background-color: $light-green;
-                font-weight: 400;
-                color: $dark-gray;
-                outline: none;
-                border: 1px solid $dark-gray;
-                &:hover{
-                  background: $dark-green;
-                  color: white;
+            &__input{
+                position: relative;
+                height: 3vh;
+                border-color: $dark-gray;
+                border-width: 1px 0px 1px 1px;
+                &__btn{
+                    padding: 0 5px;
+                    height: 3vh;
+                    position: absolute;
+                    left: 1;
+                    background-color: $light-green;
+                    font-weight: 400;
+                    color: $dark-gray;
+                    outline: none;
+                    border-color: $dark-gray;
+                    border-width: 1px 1px 1px 0px;
+                    &:hover{
+                    background: $dark-green;
+                    color: white;
+                    }
                 }
-
             }
         }
         &__social{
@@ -45,11 +55,37 @@ footer{
 
 
 .Footer__nav{
-    &__list{
+    &__lists{
         display: flex;
-        ul{
+
+        &__list{
             padding-right: $Grid-gutter;
             list-style: none;
+
+            &__link{
+                margin-bottom: 10px;
+
+                a{
+                    color: $dark-gray;
+                    &:hover{
+                        color: $dark-green
+                    }
+                }
+            }
         }
     }
+}
+
+
+.Footer__social{
+    padding-top: $Grid-gutter-half;
+    border-top: 1px solid $dark-gray;
+    display: flex;
+    justify-content: center;
+}
+
+.Footer__rights{
+    padding-top: $Grid-gutter-half;
+    display: flex;
+    justify-content: center;
 }
