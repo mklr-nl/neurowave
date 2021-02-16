@@ -1,1 +1,50 @@
-
+{
+"desktopMenu": [
+        {
+            "name": "Home",
+            "href": "#"
+        },
+        {
+            "name": "rTMS",
+            "href": "#"
+        },
+        {
+            "name": "Team",
+            "href": "#"
+        },
+        {
+            "name": "Aanmelden",
+            "href": "#"
+        },
+        {
+            "name": "Contact",
+            "href": "#"
+        }
+    ],
+    "mobileMenu": [
+        {
+            "buttons": [
+                {
+                    "name": "Test1",
+                    "href": "#"
+                },
+                {
+                    "name": "Test2",
+                    "href": "#"
+                }
+            ]
+        },
+        {
+            "buttons": [
+                {
+                    "name": "Test3",
+                    "href": "#"
+                },
+                {
+                    "name": "Test4",
+                    "href": "#"
+                }
+            ] 
+        }
+    ]
+}
