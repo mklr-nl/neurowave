@@ -4,7 +4,7 @@
     top: 0;
     width: 100%;
   }
-  .row{
+  &__row{
     background: white;
     @media screen and (min-width: $screen-md) {
       align-items: baseline;
@@ -21,7 +21,7 @@
         color: $dark-green;
       }
       &-wave{
-        font-size: 2rem;
+        font-size: 1.6rem;
         font-weight: 300;
         color: $gold;
       }
@@ -37,7 +37,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      
       &__item{
         list-style: none;
 
@@ -154,7 +154,7 @@
   width: 100%;
   padding-top: 100px;
   z-index: -1;
-  transform: translateY(-215px);
+  transform: translateY(-220px);
   position: absolute;
   right: 0;
   left: 0;
