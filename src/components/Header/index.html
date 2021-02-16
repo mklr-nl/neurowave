@@ -5,15 +5,15 @@
 {% macro mobMenu(link) %}
   <div class="row">
     <div class="col-12">
+      {% for row in mobileMenu %}
       <ul class="Mobile__menu">
-        {% for row in mobileMenu %}
+        {% for item in row.buttons %}
         <li class="Mobile__menu__item">
-          {% for item in row.buttons %}
-          <button type="submit" class="Mobile__menu__item__btn extraBtn" href="{{item.href}}">{{item.name}}</button>
-          {% endfor %}
+          <button type="submit" class="Mobile__menu__item__btn {{item.class}}" href="{{item.href}}">{{item.name}}</button>
         </li>
         {% endfor %}
       </ul>
+      {% endfor %}
     </div>
   </div>
 {% endmacro %}
@@ -39,15 +39,14 @@
             <a class="Nav__contact__text" href="#">Contact</a>
           </div>
           <div class="col-10 Nav__burger">
-              <i class="fal fa-bars Nav__burger__icon"></i>
+              <i class="fal fa-bars Nav__burger__icon Nav__burger__icon__open"></i>
+              <i class="fal fa-times Nav__burger__icon Nav__burger__icon__close notActive"></i>
           </div>
         </div>
       </div>
       <div class="container">
         <div class="Extra__menu">
-          {% for link in mobileMenu %}
-            {{mobMenu(link)}} 
-          {% endfor %}
+          {{mobMenu(link)}} 
         </div>
       </div>
     </section>

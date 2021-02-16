@@ -25,11 +25,11 @@
         {
             "buttons": [
                 {
-                    "name": "Test1",
+                    "name": "Home",
                     "href": "#"
                 },
                 {
-                    "name": "Test2",
+                    "name": "rTMS",
                     "href": "#"
                 }
             ]
@@ -37,12 +37,26 @@
         {
             "buttons": [
                 {
-                    "name": "Test3",
+                    "name": "Behandeling",
                     "href": "#"
                 },
                 {
-                    "name": "Test4",
+                    "name": "Informatie",
                     "href": "#"
+                }
+            ] 
+        },
+        {
+            "buttons": [
+                {
+                    "name": "Contact",
+                    "href": "#",
+                    "class": "secondLastBtn"
+                },
+                {
+                    "name": "rTMS",
+                    "href": "#",
+                    "class": "lastBtn"
                 }
             ] 
         }

@@ -1,58 +1,33 @@
 import "./index.scss";
 
-const burger = document.querySelector(".Nav__burger__icon");
-const extraMenu = document.querySelector(".Extra__menu");
-const extraMenuBtn = document.querySelectorAll(".extraBtn");
+const burgerOpen = document.querySelector(".Nav__burger__icon__open");
+const burgerClose = document.querySelector(".Nav__burger__icon__close");
+const mobMenu = document.querySelector(".Extra__menu");
 
-let active = false;
 
-burger.addEventListener("click", openExtraMenu);
+burgerOpen.addEventListener("click", openMobMenu);
+burgerClose.addEventListener("click", closeMobMenu);
 
-function openExtraMenu() {
-    extraMenu.classList.toggle("active");
+function openMobMenu() {
+    mobMenu.classList.add("active");
+    burgerOpen.style.opacity = 0;
     setTimeout(function(){
-        extraMenu.classList.toggle("moveDown");
-    })
-
-    // setTimeout(function() {
-    //     if (!active){
-    //         for(let i=0; i<extraMenuBtn.length; i++){
-    //         extraMenuBtn[i].style.opacity = 1;
-    //         active = true;
-    //         }
-    //     } else {
-    //         for(let i=0; i<extraMenuBtn.length; i++){
-    //         extraMenuBtn[i].style.opacity = 0;
-    //         active = false; 
-    //         }
-    //     }
-    // },1)
+        mobMenu.classList.add("moveDown100px");
+        burgerOpen.classList.add("notActive")
+        burgerClose.classList.remove("notActive")
+        burgerClose.style.opacity = 1;
+    }, 10)
 }
 
 
+function closeMobMenu() {
+    mobMenu.classList.remove("moveDown100px");
+    burgerClose.style.opacity = 0;
+    setTimeout(function(){
+    mobMenu.classList.remove("active");
+    burgerOpen.classList.remove("notActive")
+    burgerOpen.style.opacity = 1;
+    burgerClose.classList.add("notActive")
 
-// const menuBtn = document.querySelector(".menu-icon span");
-// const searchBtn = document.querySelector(".search-icon");
-// const cancelBtn = document.querySelector(".cancel-icon");
-// const items = document.querySelector(".nav-items");
-// const form = document.querySelector("form");
-
-// menuBtn.onclick = () => {
-//     items.classList.add("active");
-//     menuBtn.classList.add("hide");
-//     searchBtn.classList.add("hide");
-//     cancelBtn.classList.add("show");
-// }
-// cancelBtn.onclick = () => {
-//     items.classList.remove("active");
-//     menuBtn.classList.remove("hide");
-//     searchBtn.classList.remove("hide");
-//     cancelBtn.classList.remove("show");
-//     form.classList.remove("active");
-//     cancelBtn.style.color = "#ff3d00";
-// }
-// searchBtn.onclick = () => {
-//     form.classList.add("active");
-//     searchBtn.classList.add("hide");
-//     cancelBtn.classList.add("show");
-// }
+    }, 10)
+}

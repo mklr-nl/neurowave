@@ -6,7 +6,6 @@
   }
   .row{
     background: white;
-
     @media screen and (min-width: $screen-md) {
       align-items: baseline;
     }
@@ -22,8 +21,7 @@
         color: $dark-green;
       }
       &-wave{
-        font-size: 1.5rem;
-  
+        font-size: 2rem;
         font-weight: 300;
         color: $gold;
       }
@@ -55,28 +53,6 @@
     }
   }
 
-  &__burger{
-    display: flex;
-    align-items: center;
-    @media screen and (min-width: $screen-md){
-      display: none;
-    }
-
-    &__icon{
-      position: absolute;
-      right: 15px;
-      cursor: pointer;
-      font-weight: 400;
-      padding-top: 5px;
-      font-size: 2rem;
-      color: $dark-gray;
-
-      &:hover{
-        color: $dark-green;
-      }
-    }
-  }
-  
   &__contact{
     text-align: end;
     @media screen and (max-width: $screen-md){
@@ -93,12 +69,49 @@
       }
     }
   }
+
+  &__burger{
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: $screen-md){
+      display: none;
+    }
+
+    &__icon{
+      transition: all ease 0.4s;
+      position: absolute;
+      right: 15px;
+      cursor: pointer;
+      padding-top: 5px;
+      font-size: 2rem;
+      color: $dark-gray;
+      
+      &__open{
+        font-weight: 400;
+        font-size: 2rem;
+        &:hover{
+          color: $dark-green;
+        }
+      }
+
+      &__close{
+        font-weight: 300;
+        font-size: 2.2rem;
+        &:hover{
+          color: $red;
+        }
+      }
+    }
+  }
 }
 
 .Mobile__menu{
   margin-top: 5px;
   display: none;
   justify-content: space-around;
+  @media screen and (max-width: $screen-md) {
+    display: flex;
+  }
 
   &__item{
     width: 50%;
@@ -126,29 +139,23 @@
         min-height: $Grid-gutter;
       }
     }
-  }
-  @media screen and (max-width: $screen-md) {
-    display: flex;
+    .secondLastBtn{
+      border-bottom-right-radius: 10px;
+    }
+    
+    .lastBtn{
+      border-bottom-left-radius: 10px;
+    }
   }
 }
 
 .Extra__menu{
-  transition: ease all 1s;
+  transition: ease-in-out all 0.4s;
   width: 100%;
   padding-top: 100px;
   z-index: -1;
-  transform: translateY(-260px);
+  transform: translateY(-215px);
   position: absolute;
   right: 0;
   left: 0;
-  // display:none;
-
-  .extraBtn{
-    transition: all ease-in-out 0.4s;
-    // opacity: 0;
-  }
-}
-
-.moveDown{
-  transform: translateY(-100px);
 }
