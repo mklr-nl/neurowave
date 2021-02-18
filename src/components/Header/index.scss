@@ -58,6 +58,25 @@
     @media screen and (max-width: $screen-md){
       display: none;
     }
+    &::after{
+      content: '';
+      background: red;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      z-index: 100;
+      animation: opacityDrop 1s infinite;
+    }
+
+    @keyframes opacityDrop {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 100;
+      }
+    }
 
     &__text{
       cursor: default;
@@ -69,6 +88,8 @@
       }
     }
   }
+
+  
 
   &__burger{
     display: flex;
