@@ -54,30 +54,21 @@
   }
 
   &__contact{
+    overflow: hidden;
     text-align: end;
     @media screen and (max-width: $screen-md){
       display: none;
     }
-    &::after{
-      content: '';
-      background: red;
-      border-radius: 50%;
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      z-index: 100;
-      animation: opacityDrop 1s infinite;
-    }
 
-    @keyframes opacityDrop {
+    @keyframes borderLineInn {
       0% {
-        opacity: 0;
+        width: 0px;
       }
       100% {
-        opacity: 100;
+        width: 97px;
       }
     }
-
+  
     &__text{
       cursor: default;
       text-decoration: none;
@@ -86,10 +77,19 @@
       &:hover{
         color: $dark-blue;
       }
+      &::before{
+      content: '';
+      height: 2px;
+      // background: $gold;
+      background: linear-gradient(90deg, transparent, $gold);
+      position: absolute;
+      top: 32px;
+      animation: borderLineInn 3s ease-out;
+      animation-delay: 1s;
+      animation-fill-mode: forwards;
+    }
     }
   }
-
-  
 
   &__burger{
     display: flex;

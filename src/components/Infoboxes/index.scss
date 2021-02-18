@@ -1,13 +1,17 @@
 .Info__container{
     transform: translateY(-200px);
+    @media screen and (max-width: $screen-md){
+        transform: translateY(-500px);
+    }
 }
 
 .Info__title{
     padding: $Grid-gutter 0;
     text-align: center;
     &__text{
-      font-size: 2rem;
-      font-weight: 500;
+        transition: ease-in-out all 0.4s;
+        font-size: 2rem;
+        font-weight: 500;
     }
 }
 
@@ -15,20 +19,63 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     &__box{
         margin: 15px;
-        width: 30%;
+        width: 28%;
         height: 100%;
         background: white;
         border-radius: $border-radius;
         opacity: 0.95;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+        position: relative;
+        @media screen and (max-width: $screen-lg){
+            min-width: 40%;
+        }
+
+        &:last-child{
+            @media screen and (max-width: $screen-lg){
+                display: none;
+            }
+        }
+
+        &:not(:first-child){
+            @media screen and (max-width: $screen-md){
+            display: none;
+            
+            }
+        }
+
+        &:first-child{
+            @media screen and (max-width: $screen-md){
+            width: 100%;
+            }
+        }
+
+
         &__title{
             font-size: 1.5rem;
             font-weight: 400;
             padding: $Grid-gutter $Grid-gutter $Grid-gutter-half $Grid-gutter;
         }
         &__text{
-            padding: 0 $Grid-gutter $Grid-gutter-half $Grid-gutter;
+            font-weight: 300;
+            padding: 0 $Grid-gutter $Grid-gutter-double $Grid-gutter;
+        }
+        &__btn{
+            color: $white;
+            background: $light-blue;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-bottom-right-radius: $border-radius;
+            padding: $Grid-gutter-half/2 $Grid-gutter-half;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background: $dark-blue;
+                font-weight: 500;
+            }
         }
     }
 }
