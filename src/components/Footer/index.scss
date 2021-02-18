@@ -28,15 +28,15 @@ footer{
                     height: 3vh;
                     position: absolute;
                     left: 1;
-                    background-color: $light-green;
+                    background-color: $light-blue;
                     font-weight: 400;
                     color: $dark-gray;
                     outline: none;
                     border-color: $dark-gray;
                     border-width: 1px 1px 1px 0px;
                     &:hover{
-                    background: $dark-green;
-                    color: white;
+                    background: $dark-blue;
+                    color: $white;
                     }
                 }
             }
@@ -68,7 +68,7 @@ footer{
                 a{
                     color: $dark-gray;
                     &:hover{
-                        color: $dark-green
+                        color: $dark-blue
                     }
                 }
             }
