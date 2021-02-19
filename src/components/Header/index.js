@@ -4,7 +4,7 @@ import "./index.scss";
 const burgerOpen = document.querySelector(".Nav__burger__icon__open");
 const burgerClose = document.querySelector(".Nav__burger__icon__close");
 const mobMenu = document.querySelector(".Extra__menu");
-const infoBox = document.querySelector(".Info__title");
+const infoBox = document.querySelector(".Info__container");
 
 //! for the intro part image opacity to 50%
 const introImg = document.querySelector(".Intro__mob__img");

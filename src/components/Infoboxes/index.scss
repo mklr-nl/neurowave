@@ -2,15 +2,14 @@
     transition: all ease 0.4s;
     transform: translateY(-200px);
     @media screen and (max-width: $screen-sm){
-        transform: translateY(-800px); 
+        transform: translateY(-750px); 
     }
 }
 
 .Transform0{
     @media screen and (max-width: $screen-sm){
-        transform: translateY(50px);
+        transform: translateY(-700px);
     }
-    transform: translateY(10px);
 }
 
 .Info__title{
@@ -22,18 +21,19 @@
         font-size: 2rem;
         font-weight: 500;
         @media screen and (max-width: $screen-sm){
-            display: none;
+            transform: translateY(20px);
+
         }
     }
-    &__text__mob{
-        transform: translateY(-50px);
-        transition: ease-in-out all 0.4s;
-        font-size: 2rem;
-        font-weight: 500;
-        @media screen and (min-width: $screen-sm){
-            display: none;
-        }
-    }
+    // &__text__mob{
+    //     transform: translateY(-50px);
+    //     transition: ease-in-out all 0.4s;
+    //     font-size: 2rem;
+    //     font-weight: 500;
+    //     @media screen and (min-width: $screen-sm){
+    //         display: none;
+    //     }
+    // }
 
 }
 
