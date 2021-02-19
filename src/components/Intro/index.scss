@@ -12,11 +12,18 @@
     }
 }
 
-.Intro__mob__img{
+.Intro__mob__background{
+    background: $green;
     width: 100%;
-    min-height: 350px;
-    transition: all ease 0.4s;
-    @media screen and (min-width: $screen-md){
-        display: none;
-    }
+    height: 350px;
+}
+
+.Intro__mob__img{
+    display: none;
+    // width: 100%;
+    // min-height: 350px;
+    // transition: all ease 0.4s;
+    // @media screen and (min-width: $screen-md){
+    //     display: none;
+    // }
 }
