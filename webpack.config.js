@@ -4,7 +4,7 @@ const path = require("path");
 const ROUTES = fs
   .readdirSync("./src/routes", { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
-  .map(dirent => dirent.name);
+  .map((dirent) => dirent.name);
 
 module.exports = (env) => {
   // console.log("env", env);
@@ -42,6 +42,7 @@ module.exports = (env) => {
     output: {
       filename: "[name].js",
       path: path.join(__dirname, "build"),
+      publicPath: "",
     },
     devServer: {
       contentBase: path.join(__dirname, "build"),
@@ -50,8 +51,8 @@ module.exports = (env) => {
     },
     resolve: {
       alias: {
-        src: path.resolve(__dirname, "src")
-      }
+        src: path.resolve(__dirname, "src"),
+      },
     },
     devtool: env.local ? "inline-source-map" : "nosources-source-map",
     optimization,
@@ -93,6 +94,13 @@ module.exports = (env) => {
               },
             },
           ],
+        },
+        {
+          test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+          type: "asset",
+          generator: {
+            filename: "assets/[hash][ext][query]",
+          },
         },
       ],
     },
