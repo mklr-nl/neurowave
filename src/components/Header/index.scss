@@ -104,11 +104,11 @@
       transition: all ease 0.2s;
       position: absolute;
       right: 0;
-      cursor: pointer;
       font-size: 2rem;
       color: $dark-gray;
       
       &__open{
+        cursor: pointer;
         font-weight: 400;
         font-size: 2rem;
         &:hover{
@@ -117,6 +117,10 @@
       }
 
       &__close{
+        cursor: pointer;
+        @media screen and (max-width: $screen-sm){
+          color: $red;
+        }
         font-weight: 300;
         font-size: 2.2rem;
         &:hover{
