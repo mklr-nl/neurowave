@@ -1,5 +1,6 @@
 .Nav{
   .Section{
+    z-index: 100;
     position: fixed;
     top: 0;
     width: 100%;
@@ -99,11 +100,11 @@
     }
 
     &__icon{
+      padding: 15px;
       transition: all ease 0.2s;
       position: absolute;
-      right: 15px;
+      right: 0;
       cursor: pointer;
-      padding-top: 5px;
       font-size: 2rem;
       color: $dark-gray;
       
