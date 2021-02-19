@@ -6,24 +6,19 @@
     &__img{
         width: 100%;
         height: 100%;
-        @media screen and (max-width: $screen-md) {
+        min-height: 350px;
+        @media screen and (max-width: $screen-sm) {
             display: none;
         }
     }
 }
 
-.Intro__mob__background{
-    background: $green;
-    width: 100%;
-    height: 350px;
-}
 
 .Intro__mob__img{
-    display: none;
-    // width: 100%;
-    // min-height: 350px;
-    // transition: all ease 0.4s;
-    // @media screen and (min-width: $screen-md){
-    //     display: none;
-    // }
+    width: 100%;
+    min-height: 350px;
+    transition: all ease 0.4s;
+    @media screen and (min-width: $screen-sm){
+        display: none;
+    }
 }
