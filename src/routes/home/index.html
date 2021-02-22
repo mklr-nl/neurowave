@@ -2,12 +2,16 @@
 
 {% block body %}
 
-{% include "components/Intro/index.html" %}
-
 {% include "components/Header/index.html" %}
+
+<div class="opacityLower">
+
+{% include "components/Intro/index.html" %}
 
 {% include "components/Infoboxes/index.html" %}
 
 {% include "components/Footer/index.html" %}
+
+</div>
 
 {% endblock %}

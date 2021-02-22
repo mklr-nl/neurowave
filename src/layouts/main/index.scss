@@ -8,6 +8,10 @@
   user-select: none;
 }
 
+.opacityLower{
+  transition: all ease 0.4s;
+}
+
 .active{
   display: initial;
 }
@@ -22,6 +26,10 @@
 
 .opacity50{
   opacity: 0.5;
+}
+
+.opacity20{
+  opacity: 0.2;
 }
 
 .opacity100{
