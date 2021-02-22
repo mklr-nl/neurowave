@@ -4,60 +4,41 @@
 
 
 .Info__boxes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    justify-content: space-around;
+    @media screen and (max-width: $screen-lg) {
+        flex-direction: column;  
+        background: $light-blue;      
+    }
     &__box{
-        margin: 15px;
-        width: 28%;
-        height: 100%;
+        transform: translateY(-150px);
+        padding: 30px;
         background: white;
         border-radius: $border-radius;
         opacity: 0.95;
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-        position: relative;
-        @media screen and (max-width: $screen-lg){
-            min-width: 40%;
+        box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+        @media screen and (max-width: $screen-lg) {
+            min-width: 80%;
+            margin: $Grid-gutter auto;
         }
-
-
-        &:last-child{
-            @media screen and (max-width: $screen-lg){
-                display: none;
-            }
-        }
-
-        &:not(:first-child){
-            @media screen and (max-width: $screen-md){
-            display: none;
-            }
-        }
-
-        // &:first-child{
-            @media screen and (max-width: $screen-md){
-            width: 100%;
-            }
-        // }
-
 
         &__title{
             font-size: 1.5rem;
             font-weight: 400;
-            padding: $Grid-gutter $Grid-gutter $Grid-gutter-half $Grid-gutter;
+            padding-bottom: $Grid-gutter-half;
+
         }
         &__text{
+            padding-bottom: $Grid-gutter-half;
             font-weight: 300;
-            padding: 0 $Grid-gutter $Grid-gutter-double $Grid-gutter;
         }
         &__btn{
+            padding: 7.5px;
             color: $white;
             background: $light-blue;
             position: absolute;
             bottom: 0;
             right: 0;
             border-bottom-right-radius: $border-radius;
-            padding: $Grid-gutter-half/2 $Grid-gutter-half;
             text-align: center;
             cursor: pointer;
             &:hover{
