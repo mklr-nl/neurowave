@@ -6,14 +6,14 @@
     width: 100%;
     height: 400px;
     background-repeat: no-repeat;
-    background-image: url(/Users/daanpothof/projects/multipage/neurowave/static/NeurowaveHeader.jpg);
+    background-image: url(/static/NeurowaveHeader.jpg);
     text-align: center;
     @media screen and (min-width: $screen-lg){
         background-size: 100%;
     }
 
     &__title{
-        color: $light-gray;        
+        color: $dark-gray;        
         padding: $Grid-gutter-half;
         border-radius: $border-radius;
         font-size: 2.5rem;
