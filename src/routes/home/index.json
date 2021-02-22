@@ -60,5 +60,34 @@
                 }
             ] 
         }
+    ],
+    "infoBoxes": [
+        {
+            "boxes": [
+                {
+                    "title": "rTMS behandeling",
+                    "text": "Wilt u meer te weten komen over de rTMS behandeling (hersenstimulatie) bij Neurowave? U kunt hier meer lezen over het verloop.",
+                    "btn": "Lees meer"
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "title": "Meer informatie?",
+                    "text": "Neurowave is een praktijk gespecialiseerd in rTMS behandeling bij depressie en dwang. Onze praktijk is gelegen in Amsterdam centrum.",
+                    "btn": "Meer informatie"
+                }
+            ]
+        },
+        {
+            "boxes": [
+                {
+                    "title": "Direct aanmelden?",
+                    "text": "Heeft u last van een depressie of dwangklachten? Ervaart u dat medicatie niet genoeg effect heeft? Of wilt u liever geen medicatie? Maak een afspraak.",
+                    "btn": "Direct aanmelden"
+                }      
+            ]
+        }    
     ]
 }

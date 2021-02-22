@@ -11,7 +11,6 @@
     }
     &__box{
         transform: translateY(-150px);
-        padding: 30px;
         background: white;
         border-radius: $border-radius;
         opacity: 0.95;
@@ -24,22 +23,25 @@
         &__title{
             font-size: 1.6rem;
             font-weight: 400;
-            padding-bottom: $Grid-gutter-half;
+            padding: $Grid-gutter-half $Grid-gutter-half/2 $Grid-gutter-half/2 $Grid-gutter-half/2;
 
         }
         &__text{
-            padding-bottom: $Grid-gutter-half;
+            padding: $Grid-gutter-half/2 $Grid-gutter-half/2 $Grid-gutter-double $Grid-gutter-half/2;
             font-weight: 300;
         }
         &__btn{
-            padding: 7.5px;
+            height: 40px;
+            width: 175px;
             color: $white;
             background: $gold;
             position: absolute;
             bottom: 0;
             right: 0;
             border-bottom-right-radius: $border-radius;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             cursor: pointer;
             &:hover{
                 background: $dark-blue;
@@ -47,9 +49,4 @@
             }
         }
     }
-}
-
-.bodyfill{
-    height: 2000px;
-    width: 100%;
 }
