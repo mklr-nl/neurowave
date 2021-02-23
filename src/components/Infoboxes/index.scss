@@ -23,7 +23,7 @@
         &:not(:first-child){
             @media screen and (max-width: $screen-sm){
                 transform: translate(-90%, -150px);
-                opacity: 0%;
+                opacity: 0;
             }
         }
     
