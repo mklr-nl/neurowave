@@ -10,7 +10,8 @@
         background: $light-blue;      
     }
     &__box{
-        transform: translateY(-150px);
+        transition: ease all 1s;
+        transform: translate(0px, -150px);
         background: white;
         border-radius: $border-radius;
         opacity: 0.95;
@@ -19,6 +20,10 @@
             min-width: 80%;
             margin: $Grid-gutter auto;
         }
+        &:not(:first-child){
+            transform: translate(-300px, -150px);
+        }
+    
 
         &__title{
             font-size: 1.6rem;
