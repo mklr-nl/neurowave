@@ -6,7 +6,7 @@ const sections = document.querySelectorAll(".Info__boxes__box");
 
 const options = {
   root: null,
-  threshold: 0.2,
+  threshold: 0.21,
   rootMargin: "0px"
 };
 

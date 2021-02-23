@@ -9,10 +9,12 @@
         flex-direction: column;  
         background: $light-blue;      
     }
+
     &__box{
         transition: ease all 1s;
         transform: translate(0px, -150px);
         background: white;
+        opacity: 0.95;
         border-radius: $border-radius;
         box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
         @media screen and (max-width: $screen-lg) {
@@ -61,5 +63,5 @@
 
 .inverse:not(:first-child){
     transform: translate(0px, -150px);
-        opacity: 100%;
+    opacity: 100%;
 }
