@@ -4,9 +4,6 @@ import "./index.scss";
 const sections = document.querySelectorAll(".Info__boxes__box");
 // const sectionOne = document.querySelector(".section4");
 
-const box1 = sections[0];
-const box2 = sections[1];
-const box3 = sections[2];
 
 const options = {
   root: null,
