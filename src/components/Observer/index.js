@@ -26,6 +26,6 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+$(document).ready(function(){
+    $(window).scrollTop(0);
+});
