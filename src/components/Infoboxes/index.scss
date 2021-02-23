@@ -22,6 +22,7 @@
         &:not(:first-child){
             @media screen and (max-width: $screen-sm){
                 transform: translate(-90%, -150px);
+                opacity: 0;
             }
         }
     
@@ -60,4 +61,5 @@
 
 .inverse:not(:first-child){
     transform: translate(0px, -150px);
+        opacity: 100%;
 }
